@@ -1,30 +1,30 @@
-import { useState } from 'react';
-import { cal_backend } from 'declarations/cal_backend';
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavBar from './Components/NavBar';
+import Footer from './Components/Footer';
+import LandingPage from './Pages/LandingPage';
+import Page1 from './Pages/Page1';
+// Import the other pages...
 
 function App() {
-  const [greeting, setGreeting] = useState('');
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    cal_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
-
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
+    <div className="App">
+      <Router>
+        <NavBar />
+        {/* <div className='text'>HELLO</div> */}
+        <div className="content">
+          <LandingPage/>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/page1" element={<Page1 />} />
+            {/* Add routes for the other pages */}
+            {/* <Route path="/page10" element={<Page10 />} /> */}
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
