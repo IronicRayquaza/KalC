@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "cal_backend": {
+      "candid": "src/cal_backend/cal_backend.did",
+      "package": "cal_backend",
+      "type": "rust"
+    },
+    "cal_frontend": {
+      "dependencies": [
+        "cal_backend"
+      ],
+      "source": [
+        "src/cal_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "cal_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

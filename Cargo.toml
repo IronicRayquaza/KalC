@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/cal_backend"
+]
+resolver = "2"
