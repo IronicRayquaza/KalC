@@ -14,7 +14,7 @@ function App() {
         <NavBar />
         {/* <div className='text'>HELLO</div> */}
         <div className="content">
-          <LandingPage/>
+          <Page1/>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/page1" element={<Page1 />} />
