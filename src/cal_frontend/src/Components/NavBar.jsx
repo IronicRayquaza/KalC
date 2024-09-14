@@ -18,7 +18,7 @@ const NavBar = () => {
             <li className="dropdown">
               <Link to="/calculate">Calculate</Link>
               <div className="dropdown-content">
-                <Link to="/calculate/option1">Option 1</Link>
+                <Link to="/page1">Option 1</Link>
                 <Link to="/calculate/option2">Option 2</Link>
                 <Link to="/calculate/option3">Option 3</Link>
               </div>
