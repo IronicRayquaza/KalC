@@ -23,9 +23,9 @@ function LandingPage() {
           By using an IoT calculator, you can make informed decisions, optimize your resources, and ensure the efficiency of your IoT systems.
         </p>
       </section>
-      <footer className="footer">
+      {/* <footer className="footer">
         <p>© 2024 IoT Calculator. All rights reserved.</p>
-      </footer>
+      </footer> */}
     </div>
   );
 }
