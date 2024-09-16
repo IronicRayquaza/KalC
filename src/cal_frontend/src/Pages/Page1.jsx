@@ -1,73 +1,65 @@
 import React, { useState } from 'react';
-import './Page1.css';  // Keep the CSS file name as needed
-import Footer from '../Components/Footer';
-import NavBar from '../Components/NavBar';
+import './Page1.css';
 
 const Page1 = () => {
-  const [batteryCapacity, setBatteryCapacity] = useState('');
   const [currentConsumption, setCurrentConsumption] = useState('');
+  const [batteryCapacity, setBatteryCapacity] = useState('');
   const [dutyCycle, setDutyCycle] = useState('');
   const [batteryLife, setBatteryLife] = useState(null);
 
-  const calculateBatteryLife = (e) => {
-    e.preventDefault();
-    if (!batteryCapacity || !currentConsumption || !dutyCycle) {
-      alert('Please fill out all fields.');
+  const calculateBatteryLife = () => {
+    const current = parseFloat(currentConsumption);
+    const capacity = parseFloat(batteryCapacity);
+    const duty = parseFloat(dutyCycle) / 100;
+
+    if (isNaN(current) || isNaN(capacity) || isNaN(duty) || current <= 0 || capacity <= 0 || duty < 0 || duty > 1) {
+      setBatteryLife('Invalid input values. Please check your inputs.');
       return;
     }
 
-    const adjustedConsumption = (currentConsumption * dutyCycle) / 100;
-    const lifeInHours = batteryCapacity / adjustedConsumption;
-    setBatteryLife(lifeInHours.toFixed(2));
+    const life = (capacity / current) * duty;
+    setBatteryLife(life.toFixed(2) + ' hours');
   };
 
   return (
-    <div className="calculator-container">
-        {/* <NavBar/> */}
+    <div className="page-container">
       <h1>Power Consumption Calculator</h1>
-      <form onSubmit={calculateBatteryLife} className="calculator-form">
+      <div className="calculator">
+        <h2>Estimate Battery Life</h2>
         <div className="input-group">
-          <label>Battery Capacity (mAh):</label>
+          <label htmlFor="current-consumption">Current Consumption (mA):</label>
           <input
             type="number"
-            value={batteryCapacity}
-            onChange={(e) => setBatteryCapacity(e.target.value)}
-            placeholder="e.g. 3000"
-          />
-        </div>
-
-        <div className="input-group">
-          <label>Current Consumption (mA):</label>
-          <input
-            type="number"
+            id="current-consumption"
             value={currentConsumption}
             onChange={(e) => setCurrentConsumption(e.target.value)}
-            placeholder="e.g. 500"
           />
         </div>
-
         <div className="input-group">
-          <label>Duty Cycle (%):</label>
+          <label htmlFor="battery-capacity">Battery Capacity (mAh):</label>
           <input
             type="number"
-            value={dutyCycle}
-            onChange={(e) => setDutyCycle(e.target.value)}
-            placeholder="e.g. 75"
+            id="battery-capacity"
+            value={batteryCapacity}
+            onChange={(e) => setBatteryCapacity(e.target.value)}
           />
         </div>
-
-        <button type="submit" className="calculate-btn">Calculate</button>
-      </form>
-
-      {batteryLife && (
-        <div className="result">
-          <h2>Estimated Battery Life: {batteryLife} hours</h2>
+        <div className="input-group">
+          <label htmlFor="duty-cycle">Duty Cycle (%):</label>
+          <input
+            type="number"
+            id="duty-cycle"
+            value={dutyCycle}
+            onChange={(e) => setDutyCycle(e.target.value)}
+          />
         </div>
-      )}
-      {/* <Footer/> */}
+        <button className="calculate-btn" onClick={calculateBatteryLife}>
+          Calculate Battery Life
+        </button>
+        {batteryLife && <div className="result">Estimated Battery Life: {batteryLife}</div>}
+      </div>
     </div>
   );
 };
 
 export default Page1;
-

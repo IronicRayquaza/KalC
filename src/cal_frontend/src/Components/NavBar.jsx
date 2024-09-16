@@ -30,7 +30,7 @@ const NavBar = () => {
                 <Link to="/page10">Option 10</Link>
               </div>
             </li>
-            <li><Link to="/code">Code</Link></li>
+            <li><Link to="https://github.com/IronicRayquaza/KalC">Code</Link></li>
             <li><Link to="/discord">Discord</Link></li>
           </ul>
         </div>
