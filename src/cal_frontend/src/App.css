@@ -1,31 +1,39 @@
-/* Ensure the entire page takes the full height */
-html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  .App {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures the page takes full viewport height */
-  }
-  
-  .NavBar {
-    /* Ensure the NavBar does not overlap content */
-    position: relative;
-    z-index: 1000; /* Make sure it's above the content */
-  }
-  
+/* Ensure content is pushed down below the fixed navbar */
+.content {
+  padding-top: 50px; /* Adjust based on the actual navbar height */
+  padding-bottom: 50px;
+  margin-top: 30px; /* For the footer */
+}
+
+/* Optional: Ensure footer sticks to the bottom */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 40px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+.NavBar {
+  background-color: #2c3e50;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 30px; /* Same height as your navbar */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
   .content {
-    flex: 1; /* Makes sure the content takes up the remaining space, pushing the footer down */
-    padding: 20px; /* Adjust padding as needed */
-    margin-top: 60px; /* Adjust this value based on the height of your NavBar */
+    padding-top: 60px;
   }
-  
-  .text {
-    margin-top: 60px;
-    font-size: 24px;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
+}

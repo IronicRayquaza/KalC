@@ -2,16 +2,17 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f3f4f6;
-    margin: 0;
+    margin-top: 200px;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 60px;
   }
   
   .calculator-container {
     background-color: white;
+    margin-top: 200px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

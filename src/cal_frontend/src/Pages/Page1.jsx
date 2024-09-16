@@ -24,7 +24,7 @@ const Page1 = () => {
   return (
     <div className="calculator-container">
         {/* <NavBar/> */}
-      <h1>IoT Power Consumption Calculator</h1>
+      <h1>Power Consumption Calculator</h1>
       <form onSubmit={calculateBatteryLife} className="calculator-form">
         <div className="input-group">
           <label>Battery Capacity (mAh):</label>

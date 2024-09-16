@@ -3,7 +3,7 @@
     color: white;
     padding: 40px 0;
     position: relative; /* Correct the position */
-    width: 213vh;
+    width: 214.5vh;
     bottom: 0;
     display: flex;
     flex-direction: column;
@@ -70,7 +70,7 @@
     text-align: center;
     padding: 10px 20px;
     font-size: 14px;
-    width: 210.5vh; /* Fixed the width issue */
+    width: 210vh; /* Fixed the width issue */
     position: relative;
     bottom: 0;
   }
