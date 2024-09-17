@@ -1,7 +1,7 @@
 /* Page.css */
 
 /* Global Styling */
-body {
+body,html {
   font-family: 'Arial', sans-serif;
   background-color: #f3f4f6;
   margin: 60px;
@@ -10,8 +10,9 @@ body {
 }
 
 /* Ensure content is pushed down below the fixed navbar */
-.content {
-  padding-top: 60px; /* Adjust this value based on the actual height of the navbar */
+.main-content {
+  padding-top: 60px;
+  margin: 60px; /* Adjust this value based on the actual height of the navbar */
 }
 
 /* Styling for the calculator container */

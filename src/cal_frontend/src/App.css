@@ -6,10 +6,10 @@
 }
 
 /* Style the content area to push below the fixed navbar */
-.content {
+.main-content {
   flex: 1; /* Allow content to grow and take available space */
   padding: 20px ; /* Padding around the content */
-  margin-top: 60px; /* Margin to push content below the fixed navbar */
+  margin: 60px; /* Margin to push content below the fixed navbar */
   /* Adjust margin-top based on the height of your navbar */
 }
 
@@ -17,7 +17,7 @@
 .footer {
   background-color: #2c3e50;
   color: white;
-  padding: 20px;
+  padding: 0px;
   text-align: center;
   width: 100%;
   bottom: 0;
@@ -29,10 +29,11 @@
 .navbar {
   background-color: #2c3e50;
   color: white;
-  padding: 20px 0;
+  padding: 0px 0;
   position: relative;
   width: 100%;
   top: 0;
+  margin: 25px;
   z-index: 1000; /* Ensures navbar is above other content */
 }
 
