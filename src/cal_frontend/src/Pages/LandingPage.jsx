@@ -5,7 +5,8 @@ function LandingPage() {
   return (
     <div className="landing-page">
       <header className="header">
-        <h1>Welcome to the IoT Calculator</h1>
+        <hdef>Welcome to KALC</hdef>
+        <h1>Welcome to KALC</h1>
         <p>Your go-to tool for managing and optimizing IoT projects</p>
       </header>
       <section className="content">

@@ -4,59 +4,70 @@
 .navbar {
   background-color: #2c3e50; /* Dark background color */
   color: white;
-  padding: 10px 20px; /* Vertical and horizontal padding */
+  padding: 0; /* Remove padding for uniform height */
   position: fixed; /* Fixed position at the top */
   width: 100%;
   top: 0;
+  height: 50px; /* Adjusted height for smaller navbar */
   left: 0;
   z-index: 1000; /* Ensures navbar stays on top */
+  box-sizing: border-box; /* Ensures padding is included in height */
 }
 
 /* Container within the navbar */
 .navbar-container {
   display: flex;
   justify-content: space-between; /* Space between logo and links */
-  align-items: center;
+  align-items: center; /* Center align items vertically */
   max-width: 1200px; /* Max width for alignment */
   margin: 0 auto; /* Center alignment */
-  flex-wrap: wrap; /* Allows wrapping of content for smaller screens */
+  padding: 0 20px; /* Horizontal padding for better spacing */
+  box-sizing: border-box; /* Include padding in the width */
+  height: 100%; /* Full height of the navbar */
 }
 
 /* Logo styling */
 .navbar-logo h1 {
   color: white;
   margin: 0;
-  font-size: 24px; /* Font size for logo */
+  padding: 0; /* Reset padding to align with links */
+  font-size: 20px; /* Adjusted font size for smaller navbar */
   white-space: nowrap; /* Prevents text wrapping */
 }
 
-/* Navbar links */
-.navbar-links ul {
-  list-style: none;
+/* Navbar links container */
+.navbar-links {
   display: flex;
-  margin: 0;
-  padding: 0;
-  justify-content: flex-end;
-  flex-wrap: wrap; /* Allows wrapping of links */
+  align-items: center; /* Center align items vertically */
 }
 
+/* Navbar links list */
+.navbar-links ul {
+  list-style: none;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex;
+  gap: 15px; /* Adjusted space between links */
+}
+
+/* Navbar links */
 .navbar-links ul li {
-  position: relative; /* Needed for dropdown positioning */
-  margin-left: 20px;
+  margin: 0; /* Remove margin */
 }
 
 .navbar-links ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px; /* Adjusted font size for smaller navbar */
+  padding: 8px 12px; /* Adjusted padding for vertical alignment */
   transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
 .navbar-links ul li a:hover {
-  color: #3498db; /* Color change on hover */
+  color: #01080d; /* Color change on hover */
 }
 
-/* Dropdown menu styles */
+/* Dropdown styles */
 .dropdown {
   position: relative;
 }
@@ -91,18 +102,14 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .navbar-container {
-    flex-direction: row; /* Keep navbar items in a row */
-    justify-content: space-around; /* Space items across the navbar */
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
   }
 
   .navbar-links ul {
-    flex-direction: row;
-    width: 100%;
-    justify-content: center; /* Center the navbar items */
-  }
-
-  .navbar-links ul li {
-    margin-left: 10px;
-    font-size: small; /* Reduced margin for smaller screens */
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Space between links */
+    width: 100%; /* Full width for vertical stack */
+    text-align: center; /* Center align links text */
   }
 }

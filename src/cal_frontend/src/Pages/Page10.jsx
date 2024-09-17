@@ -22,10 +22,11 @@ const Page10 = () => {
 
   return (
     <div className="page-container">
+      <hwhy>KALC WAS EXPOSED?</hwhy>
       <h1>CPU Load and Performance Calculator</h1>
 
       <div className="calculator">
-        <h2>Calculate Processing Power Requirements for IoT Devices</h2>
+        {/* <h2>Calculate Processing Power Requirements for IoT Devices</h2> */}
         <form onSubmit={calculateCpuLoad}>
           <div className="input-group">
             <label>Task Duration (ms):</label>

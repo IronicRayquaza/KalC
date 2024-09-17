@@ -22,10 +22,11 @@ const Page8 = () => {
 
   return (
     <div className="page-container">
+      <hwhy>KALC WAS EXPOSED?</hwhy>
       <h1>RF Link Budget Calculator</h1>
 
       <div className="calculator">
-        <h2>Calculate Signal Strength for IoT Communication</h2>
+        {/* <h2>Calculate Signal Strength for IoT Communication</h2> */}
         <form onSubmit={calculateLinkBudget}>
           <div className="input-group">
             <label>Transmission Power (dBm):</label>

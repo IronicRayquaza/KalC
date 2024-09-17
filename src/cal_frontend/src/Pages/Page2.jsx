@@ -20,10 +20,11 @@ const Page4 = () => {
 
   return (
     <div className="page-container">
+      <hwhy>KALC WAS EXPOSED?</hwhy>
       <h1>Latency Calculator</h1>
 
       <div className="calculator">
-        <h2>Estimate Communication Latency</h2>
+        {/* <h2>Estimate Communication Latency</h2> */}
         <form onSubmit={calculateLatency}>
           <div className="input-group">
             <label>Data Size (KB):</label>

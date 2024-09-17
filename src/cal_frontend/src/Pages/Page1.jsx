@@ -23,9 +23,10 @@ const Page1 = () => {
 
   return (
     <div className="page-container">
+      <hwhy>KALC WAS EXPOSED?</hwhy>
       <h1>Power Consumption Calculator</h1>
       <div className="calculator">
-        <h2>Estimate Battery Life</h2>
+        {/* <dif>Estimate Battery Life</dif> */}
         <div className="input-group">
           <label htmlFor="current-consumption">Current Consumption (mA):</label>
           <input

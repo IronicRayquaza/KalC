@@ -20,10 +20,11 @@ const Page6 = () => {
 
   return (
     <div className="page-container">
+      <hwhy>KALC WAS EXPOSED?</hwhy>
       <h1>Duty Cycle Calculator</h1>
 
       <div className="calculator">
-        <h2>Calculate Duty Cycle for IoT Devices</h2>
+        {/* <h2>Calculate Duty Cycle for IoT Devices</h2> */}
         <form onSubmit={calculateDutyCycle}>
           <div className="input-group">
             <label>Active Time (seconds):</label>

@@ -21,10 +21,11 @@ const Page9 = () => {
 
   return (
     <div className="page-container">
+      <hwhy>KALC WAS EXPOSED?</hwhy>
       <h1>Battery Sizing Calculator</h1>
 
       <div className="calculator">
-        <h2>Calculate Optimal Battery Size for IoT Devices</h2>
+        {/* <h2>Calculate Optimal Battery Size for IoT Devices</h2> */}
         <form onSubmit={calculateBatterySize}>
           <div className="input-group">
             <label>Power Consumption (mA):</label>

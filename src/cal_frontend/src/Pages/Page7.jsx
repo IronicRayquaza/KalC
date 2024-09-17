@@ -24,10 +24,11 @@ const Page7 = () => {
 
   return (
     <div className="page-container">
+      <hwhy>KALC WAS EXPOSED?</hwhy>
       <h1>Sensor Calibration Calculator</h1>
 
       <div className="calculator">
-        <h2>Calibrate Your Sensor Data</h2>
+        {/* <h2>Calibrate Your Sensor Data</h2> */}
         <form onSubmit={calculateCalibration}>
           <div className="input-group">
             <label>Raw Sensor Value:</label>

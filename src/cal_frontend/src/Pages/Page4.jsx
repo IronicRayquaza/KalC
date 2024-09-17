@@ -22,10 +22,11 @@ const Page4 = () => {
 
   return (
     <div className="page-container">
+      <hwhy>KALC WAS EXPOSED?</hwhy>
       <h1>ADC Calculator</h1>
 
       <div className="calculator">
-        <h2>Analog to Digital Converter (ADC) Calculation</h2>
+        {/* <h2>Analog to Digital Converter (ADC) Calculation</h2> */}
         <form onSubmit={calculateADC}>
           <div className="input-group">
             <label>Input Voltage (V):</label>

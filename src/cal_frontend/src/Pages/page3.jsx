@@ -20,10 +20,11 @@ const Page3 = () => {
 
   return (
     <div className="page-container">
+      <hwhy>KALC WAS EXPOSED?</hwhy>
       <h1>Bandwidth Calculator</h1>
 
       <div className="calculator">
-        <h2>Calculate Required Bandwidth</h2>
+        {/* <h2>Calculate Required Bandwidth</h2> */}
         <form onSubmit={calculateBandwidth}>
           <div className="input-group">
             <label>Data Size (KB):</label>

@@ -1,23 +1,25 @@
 /* General body and footer reset to prevent margin issues */
 body, html {
-  top: 25px;
-  margin: 0px;
-  padding: 0;
+  margin: 0; /* Remove margin to prevent affecting layout */
+  padding: 0; /* Remove padding */
   box-sizing: border-box; /* Ensures padding and borders are included in the element’s total width and height */
-  height: 60vh; /* Ensure the body takes full height for proper footer placement */
+  height: 100%; /* Ensure the body takes full height */
 }
 
 /* Ensure the body takes full height and pushes footer to bottom */
 body {
-  margin-top: 25px;
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes at least the full viewport height */
 }
 
 /* Main content styling */
 .main-content {
   flex: 1; /* Allows the content to grow and fill space */
-  margin: 60px; /* Adjust based on NavBar height */
+  padding-top: 60px; /* Push content below the Navbar height */
+  padding-bottom: 30px; /* Space for footer at the bottom */
+  padding-left: 20px; /* Add left padding for content */
+  padding-right: 20px; /* Add right padding for content */
 }
 
 /* General footer styling */
@@ -26,9 +28,6 @@ body {
   color: white;
   padding: 30px 0; /* Vertical padding */
   width: 100%; /* Full width */
-  position: relative;
-  left: 0;
-  bottom: 0;
   box-sizing: border-box; /* Include padding and borders in width calculations */
 }
 
@@ -77,7 +76,7 @@ body {
 }
 
 .footer-section ul li a:hover {
-  color: #3498db; /* Blue color on hover */
+  color: #000304; /* Blue color on hover */
 }
 
 /* Social media icons styling */
@@ -90,7 +89,7 @@ body {
 }
 
 .social-icons a:hover {
-  color: #3498db; /* Blue color on hover */
+  color: #000203; /* Blue color on hover */
 }
 
 /* Footer bottom section */

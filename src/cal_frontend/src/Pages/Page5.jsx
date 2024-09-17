@@ -31,10 +31,11 @@ const Page5 = () => {
 
   return (
     <div className="page-container">
+      <hwhy>KALC WAS EXPOSED?</hwhy>
       <h1>Cloud Cost Estimator</h1>
 
       <div className="calculator">
-        <h2>Estimate Cloud Service Costs</h2>
+        {/* <h2>Estimate Cloud Service Costs</h2> */}
         <form onSubmit={calculateCost}>
           <div className="input-group">
             <label>Data Transmission (GB):</label>
